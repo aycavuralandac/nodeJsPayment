@@ -2,6 +2,7 @@
 
 This project contains Beko 1000TR payment api call. The file sent to the service is assumed to exist. (Qr code file reading feature added in the project)
 
+Project running on localhost:4500 adress
 
 ### Prerequisites
 
@@ -28,7 +29,7 @@ Following modules used in project must be downloaded.
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com/) - The front ent framework used
+* [Handlebars](https://handlebarsjs.com//) - The front ent template engine used
 
 
 ## Authors
