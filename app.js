@@ -6,6 +6,8 @@ const session = require('express-session');
 const upload = require('express-fileupload');
 const flash = require('connect-flash');
 
+const port = process.env.PORT || 4500
+
 var app = express();
 var hbs = exphbs.create({ /* config */ });
  
@@ -42,7 +44,7 @@ const fileReader = require('./routes/fileReader');
 //use routes
 app.use('/',home);
 app.use('/fileReader',fileReader);
-app.listen(4500, ()=>{
+app.listen(port, ()=>{
     console.log('Listening on port 4500')
 });
 
