@@ -1,0 +1,58 @@
+<div class="card card-register mx-auto mt-5">
+    <div class="card-header">Payment Informations</div>
+    <div class="card-body">
+        <form action="/payment" method="post">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label >Return Code:  </label>
+                        <input readonly class="form-control-plaintext" id="returnCode" value="{{payment.returnCode}}" name="returnCode" class="form-control" type="text">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Return Desc:  </label>
+                        <input readonly class="form-control-plaintext" value="{{payment.returnDesc}}" name="returnDesc" class="form-control"  type="text">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Receipt Msg Customer:  </label>
+                        <input readonly class="form-control-plaintext" value="{{payment.receiptMsgCustomer}}" name="receiptMsgCustomer" class="form-control" type="text">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Receipt Msg Merchant:  </label>
+                        <input readonly class="form-control-plaintext" value="{{payment.receiptMsgMerchant}}" name="receiptMsgMerchant" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>  
+            {{#each payment.paymentInfoList}}            
+                {{#each paymentActionList}}    
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label>Payment Type:  </label>
+                            <input readonly class="form-control-plaintext" value="{{paymentType}}" name="paymentType" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label >Amount:  </label>
+                            <input readonly class="form-control-plaintext" value="{{amount}}" name="amount" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label>Currency Id:  </label>
+                            <input readonly class="form-control-plaintext" value="{{currencyID}}" name="currencyID" class="form-control"  type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label>Vat Rate:  </label>
+                            <input readonly class="form-control-plaintext" value="{{vatRate}}" name="vatRate" class="form-control" type="text">
+                        </div>
+                    </div>   
+                </div>         
+                {{/each}}    
+            {{/each}}              
+            <button type="submit" class="btn btn-primary">Pay</button>
+        </form>
+    </div>
+</div>
