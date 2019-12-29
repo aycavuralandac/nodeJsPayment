@@ -5,13 +5,17 @@ This project contains Beko 1000TR payment api call. The file sent to the service
 
 ### Prerequisites
 
+```
 .npm
 .node
+```
+
 
 ### Installing
 
 Following modules used in project must be downloaded.
 
+```
 .npm install express
 .npm install fs
 .npm install express-handlebars
@@ -20,6 +24,7 @@ Following modules used in project must be downloaded.
 .npm install express-fileupload
 .npm install connect-flash
 
+```
 
 ## Built With
 
@@ -28,6 +33,6 @@ Following modules used in project must be downloaded.
 
 ## Authors
 
-* **Ayca Vural Andac** - (hhttps://github.com/aycavuralandac)
+* **Ayca Vural Andac** - (https://github.com/aycavuralandac)
 
 
